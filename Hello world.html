@@ -4,19 +4,26 @@
   <title>Результаты теннисных матчей</title>
 <body>
      <script>
-      //task 7
-      let User = {name: 'Sergey', surname: 'Ivanov', patronymic: 'Sergeevich'}
-      alert (User.surname + ' ' + User.name + ' ' + User.patronymic)
-      // task 8
-      let date = {day: 5, month: 'December', year: 2021}
-      date.day_of_week = 'Sunday'
-      alert ('Today is ' + date.day + 'th of ' + date.month + ' ' + date.year + ', ' + date.day_of_week)
-      //task 9
-      let simple_task = {}
-      simple_task.a = 1
-      simple_task.b = 2
-      simple_task.c = 3
-      alert (simple_task.a + simple_task.b + simple_task.c)
+       //key_war tasks
+      //  task 1
+       /* let arr = ['a','b','c']
+       key = 2
+       alert (arr[key]) */
+      //  alert (arr.key) — нелегитимно!
+      // task 2 
+      /* let arr = [7,3,1,756,344,11]
+      key1 = 3
+      key2 = 2
+      let result = arr[key1] + arr[key2]
+      alert (result)*/
+      // task 3
+       let obj = {'a': 1, 'b': 2, 'c': 3, 32: 'bump'}
+      let key = 'b'
+      let key2 = 32
+      console.log(obj[key])
+      // console.log(obj.key) — ВОТ ТУТ ВОТ ОООООООЧЕНЬ ВНИМАТЕЛЬНО: выведет 'undefined', ибо будет искать ключ по строке 'key' в объекте. 
+      // console.log(obj.key2) — ТОЖЕ ОШИБКА
+      // console.log(obj[key2]) — работает исправно
      </script>
 
 </body>

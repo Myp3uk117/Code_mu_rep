@@ -4,37 +4,16 @@
   <title>My JS App</title>
 <body>
      <script>
-      //  If_else_tasks
-      // task 1
-      let test1 = 10
-      if (test1>=10) {
-        console.log('Correct!')
+      let num = 33
+      if (num < 10 || num > 99){
+        console.log('Число не попадает в указанный диапазон')
       } else {
-        console.log('Incorrect!')
-      }
-      // task 2
-      let test2 = 11
-      if (test2 < 10) {
-        console.log('Correct!')
-      } else {
-        console.log('Incorrect!')
-      }
-      // other cases
-      if (test2 != 10){
-        console.log('Correct!')
-      } else {
-        console.log('Incorrect!')
-      }
-      // task 7
-      let test_1 = 22
-      let test_2 = 22
-      if (test_1 > test_2){
-        console.log('Test_1 is much more than Test_2')
-      } else {
-        if (test_2 > test_1){
-          console.log('Test_2 is much more than Test_1')
-        } else {
-          console.log('They are equals!')
+        let num_string = String(num)
+        let result = Number(num_string[0])+Number(num_string[1])
+        if (result < 10){
+          console.log('Сумма цифр числа равна ' + result + '. Сумма однозначна.')
+        } else{
+          console.log('Сумма цифр числа равна ' + result + '. Сумма двузначна.')
         }
       }
      </script>

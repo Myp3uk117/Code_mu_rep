@@ -1,14 +1,22 @@
 <!DOCTYPE HTML>
 <meta charset="utf-8">
 <html>
-  <title>Результаты теннисных матчей</title>
+  <title>My JS App</title>
 <body>
      <script>
-   let arr = ['a', 'b', 'c', 'd', 'e'];
-   delete arr [0]
-   delete arr [1]
-   console.log (arr.length)
+   let arrd = ['a', 'b', 'c', 'd', 'e'];
+   delete arrd [0]
+   delete arrd [1]
+   console.log (arrd.length)
   //  Длина останется прежней — ВАЖНО!
+  /* const arr = ['a', 'b', 'c'];
+arr = [1, 2, 3];
+console.log(arr); */
+// Менять массив или объект целиком — НЕЛЬЗЯ!
+const ars = ['a', 'b', 'c'];
+ars[1] = '!';
+console.log(ars);
+// Менять один элемент поточечно — МОЖНО!
      </script>
 
 </body>

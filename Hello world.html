@@ -4,32 +4,60 @@
   <title>My JS App</title>
 <body>
      <script>
-       let simple = 71, simple_Arr = ''
-       let flag = false, flag_Arr = false
+      // Дано число num с неким начальным значением. Умножайте его на 3 столько раз, пока результат умножения не станет больше 1000. Какое число получится?
 
-       for (let i = 2; i < simple; i++){
-         if (simple % i == 0){
-           flag = true
-           break;
-         }
-         flag_Arr = false
-         for (let j = 2; j < i; j++){
-           if (i % j == 0){
-             flag_Arr = true
-             break;
-           }
-         }
-         if (!flag_Arr){
-            simple_Arr += (i+' ')
-           }
-       }
-       if (flag){
-         console.log('Число НЕ простое')
-       } else {
-         console.log('Число простое!')
-         simple_Arr += (simple+' ')
-       }
-       console.log(simple_Arr)
+      let num = 14
+      for (num; num <= 1000; num*=3){
+        // console.log(num)
+      };
+      console.log(num)
+
+      // С помощью цикла сформируйте строку '9-8-7-6-5-4-3-2-1' и запишите ее в переменную str. Выведите значение этой переменной на экран.
+
+      let str = '';
+      for (i=9; i>0; i--){
+        if (i == 1){
+          str+=i
+        } else{
+          str+=i+'-'
+        }
+      }
+      console.log(str)
+
+      // Переберите циклом числа от 10 до 1000 и выведите на экран те числа, сумма двух первых цифр которых равна 5.
+
+      let sum_Arr = '', temp_K = ''
+      
+      for (k = 10; k<=1000; k++){
+        temp_K = String(k)
+        if (Number(temp_K[0]) + Number(temp_K[1]) == 5){
+          sum_Arr += temp_K + ' '
+        }
+      }
+
+      console.log(sum_Arr)
+     
+      // Переберите циклом числа от 1 до 30 и сложите их как строки.
+
+      let sum_String = ''
+
+      for (k = 1; k <= 30; k++){
+        sum_String+=String(k)
+      }
+      console.log(sum_String)
+
+      // С помощью двух вложенных циклов выведите на экран следующую строку: 11 12 13 21 22 23 31 32 33
+
+      let another_Annoying_String = ''
+
+      for (i = 1; i<= 3; i++){
+        for (j= 1; j<=3; j++){
+          another_Annoying_String+=(String(i)+String(j)+' ')
+        }
+      }
+
+      console.log (another_Annoying_String)
+      
      </script>
 
 </body>

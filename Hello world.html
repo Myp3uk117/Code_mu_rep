@@ -4,60 +4,46 @@
   <title>My JS App</title>
 <body>
      <script>
-      // Дано число num с неким начальным значением. Умножайте его на 3 столько раз, пока результат умножения не станет больше 1000. Какое число получится?
 
-      let num = 14
-      for (num; num <= 1000; num*=3){
-        // console.log(num)
-      };
-      console.log(num)
-
-      // С помощью цикла сформируйте строку '9-8-7-6-5-4-3-2-1' и запишите ее в переменную str. Выведите значение этой переменной на экран.
-
-      let str = '';
-      for (i=9; i>0; i--){
-        if (i == 1){
-          str+=i
-        } else{
-          str+=i+'-'
-        }
-      }
-      console.log(str)
-
-      // Переберите циклом числа от 10 до 1000 и выведите на экран те числа, сумма двух первых цифр которых равна 5.
-
-      let sum_Arr = '', temp_K = ''
-      
-      for (k = 10; k<=1000; k++){
-        temp_K = String(k)
-        if (Number(temp_K[0]) + Number(temp_K[1]) == 5){
-          sum_Arr += temp_K + ' '
+// Дан массив с числами. Переберите его циклом и запишите в новый массив только положительные из чисел.
+// Чуть-чуть побалуемся
+      let empty_Array = []
+      let enorm = 5
+      for (i = 1; i <= 10; i++){
+        empty_Array.push(enorm)
+        if (enorm > 0){
+          enorm -= 10
+        } else {
+          enorm += 7
         }
       }
 
-      console.log(sum_Arr)
-     
-      // Переберите циклом числа от 1 до 30 и сложите их как строки.
-
-      let sum_String = ''
-
-      for (k = 1; k <= 30; k++){
-        sum_String+=String(k)
-      }
-      console.log(sum_String)
-
-      // С помощью двух вложенных циклов выведите на экран следующую строку: 11 12 13 21 22 23 31 32 33
-
-      let another_Annoying_String = ''
-
-      for (i = 1; i<= 3; i++){
-        for (j= 1; j<=3; j++){
-          another_Annoying_String+=(String(i)+String(j)+' ')
+      console.log(empty_Array)
+      // Массив нас устраивает. Поехали.
+      let positive_Array = []
+      for (i = 0; i < empty_Array.length; i++){
+        if (empty_Array[i] > 0){
+          positive_Array.push(empty_Array[i])
         }
       }
+      // Выводим итоговый массив:
+      console.log(positive_Array)
 
-      console.log (another_Annoying_String)
-      
+      /* Даны два массива: первый с названиями дней недели, а второй - с их порядковыми номерами:*/
+
+      let arr1 = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+      let arr2 = [1, 2, 3, 4, 5, 6, 7];
+      /*С помощью цикла создайте объект, ключами которого будут названия дней, а значениями - их номера. */
+
+      let daily_Obj = {}
+      for (i = 0; i< arr1.length;i++){
+        /* let days = arr1[i], numbers = arr2[i]
+        daily_Obj[days] = numbers */
+        
+        daily_Obj[arr1[i]] = arr2[i] // Лучше так, без дополнительных переменных.
+      }
+
+      console.log(daily_Obj)
      </script>
 
 </body>

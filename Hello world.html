@@ -4,59 +4,32 @@
   <title>My JS App</title>
 <body>
      <script>
-     let arr = [1, 2, 3, 4, 5];
-     let i,j,k 
-     /* for (i=0;i<arr.length; i++){
-       if (arr[i] % 2 != 0){
-         console.log(arr[i])
+       let simple = 71, simple_Arr = ''
+       let flag = false, flag_Arr = false
+
+       for (let i = 2; i < simple; i++){
+         if (simple % i == 0){
+           flag = true
+           break;
+         }
+         flag_Arr = false
+         for (let j = 2; j < i; j++){
+           if (i % j == 0){
+             flag_Arr = true
+             break;
+           }
+         }
+         if (!flag_Arr){
+            simple_Arr += (i+' ')
+           }
        }
-     } */
-
-    //  Дан массив с элементами 2, 5, 9, 15, 1, 4. С помощью цикла for и оператора if выведите в консоль те элементы массива, которые больше 3-х, но меньше 10.
-
-    const ARR = [2,5,9,15,1,4]
-    for (j=0;j<ARR.length;j++){
-      if (ARR[j] > 3 && ARR[j] < 10){
-        console.log(ARR[j])
-      }
-    }
-
-    // Дан массив числами, например:
-    let arr_1 = [10, 20, 30, 50, 235, 3000];
-    // Выведите на экран только те числа из массива, которые начинаются на цифру 1, 2 или 5.
-    for (k = 0; k<arr_1.length; k++){
-      if (String(arr_1[k])[0] == 1 || String(arr_1[k])[0] == 2 || String(arr_1[k])[0] == 5){
-        console.log(arr_1[k])
-      }
-    }
-
-    let arr_2 = [1,2,3,4,5,6]
-    let arr_2_str = []
-    for (j = arr_2.length - 1; j >= 0; j--){
-      arr_2_str += (arr_2[j]+ ' ')
-    }
-    console.log(arr_2_str)
-
-    let arr_3 = [1,5,6,3,6,6,4,8]
-    for (j = 0; j<arr_3.length; j++){
-      if (arr_3[j]==j+1){
-        console.log(arr_3[j])
-      }
-    }
-
-    // New synt:
-
-    const ARR_4 = ['a','b','c','d','e']
-    for (elem of ARR_4){ //wow i've never seen this ~it before
-      console.log(elem)
-    }
-
-    let res = 0 ;
-    let obj = {a: 1, b: 2, c: 3, d: 4, e: 5}
-    for (elem in obj){ // ... and this one
-        res += obj[elem]
-    }
-    console.log(res)
+       if (flag){
+         console.log('Число НЕ простое')
+       } else {
+         console.log('Число простое!')
+         simple_Arr += (simple+' ')
+       }
+       console.log(simple_Arr)
      </script>
 
 </body>

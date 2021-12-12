@@ -4,80 +4,47 @@
   <title>My JS App</title>
 <body>
      <script>
-      // Пусть у нас дан следующий объект:
+      const SENTENCE = 'Съешь ещё этих мягких французских булок да выпей же чаю'
+      let sentence_Array = []
+      let period = {}
+      let period_Test = {}
 
-      let obj = {a: 1, b: 2, c: 3, d: 4, e: 5};
-      /*  Давайте поменяем местами ключи и значения в объекте, то сделаем из нашего объекта следующий:
-      {1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e'} */
-      let inverted_Obj = {}
-
-      for (let i in obj){
-        inverted_Obj[obj[i]] = i
+      for (i = 0; i < SENTENCE.length; i++){
+        sentence_Array.push(SENTENCE[i])
+        if (period[sentence_Array[i]] === undefined){
+          period[sentence_Array[i]] = 1
+        } else {
+          period[sentence_Array[i]] ++
+        }
       }
-      console.log(inverted_Obj)
+      // Гораздо лучше написать вот так:
 
+      for (i = 0; i < SENTENCE.length; i++){
+        
+        if (period_Test[SENTENCE[i]] === undefined){
+          period_Test[SENTENCE[i]] = 1
+        } else {
+          period_Test[SENTENCE[i]] ++
+        }
+      }
 
-      // Дан следующий объект с работниками и их зарплатами:
+      console.log (sentence_Array)
+      console.log (period)
+      console.log (period_Test)
 
-let obj_emp = {
-	employee1: 100,
-	employee2: 200,
-	employee3: 300,
-	employee4: 400,
-	employee5: 500,
-	employee6: 600,
-	employee7: 700,
-};
-// Увеличьте зарплату каждого работника на 10%.
+      /* let arr = ['a', 'b', 'c', 'a', 'a', 'b'];
+let count = {};
 
-/* for (let k in obj_emp){
-  obj_emp[k] *= 1.1
-}
-console.log(obj_emp)  */
-
-// Модифицируйте предыдущую задачу так, чтобы зарплата увеличивалась только тем работникам, у которых она меньше или равна 400.
-
-for (let k in obj_emp){
-  if (obj_emp[k] <= 400){
-    obj_emp[k] *= 1.1
-  }
-}
-console.log(obj_emp)
-
-let obj_To_Array = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5};
-let arr1 = [], arr2 = []
-for (let i in obj_To_Array){
-  arr1.push(i);
-  arr2.push(obj_To_Array[i]);
-}
-console.log(arr1)
-console.log(arr2)
-let new_obj = {}
-for (let k = 0; k< arr2.length; k++){
-  new_obj[arr1[k]] = arr2[k]
-}
-console.log(new_obj)
-
-let obj_First_Digit = {
-	1: 125,
-	2: 225,
-	3: 128,
-	4: 356,
-	5: 145,
-	6: 281,
-	7: 452,
-};
-// Запишите в новый массив элементы, значение которых начинается с цифры 1 или цифры 2.
-let arr_First_Digit = []
-for (let k in obj_First_Digit){
-  if (String(obj_First_Digit[k])[0] == 1 || String(obj_First_Digit[k])[0] == 2) arr_First_Digit.push(obj_First_Digit[k])
+for (let elem of arr) {
+	if (count[elem] === undefined) {
+		count[elem] = 1;
+	} else {
+		count[elem]++;
+	}
 }
 
-console.log(arr_First_Digit)
-
-
-
-     </script>
+console.log(count); */
+    </script>
 
 </body>
 

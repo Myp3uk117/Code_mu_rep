@@ -4,81 +4,32 @@
   <title>My JS App</title>
 <body>
      <script>
-
-      //  task 1
-      /*for (i = 1; i<= 100; i++){
-        console.log(i+'\n')
-      } */
-
-      //task 2
-      /* for (i =100; i>0; i--){
-        console.log(i)
-      } */
-
-      //task 3
-      /* for (i=1; i<=100; i++){ //i+=2, i=2
-        if (!(i%2)){
-          console.log(i)
-        }
-      } */
-
-      //task 4 
-      /* let arr = []
-      for (i=1;i<=10;i++){
-        arr.push('x')
-      }
-      console.log(arr) */
-
-      //task 5
-      /* let arr = []
-      for (i = 1; i<= 10; i++){
-        arr.push(i)
-      }
-      console.log(arr) */
-
-      //task 6
-      /*const ARR = [-123,4,314,-42,44,1,-4,2,4,66]
-
-       for (elem of ARR){
-        if ((elem > 0) && (elem < 10)){
-          console.log(elem)
-        }
-      } */
-
-      //task 7
-      /* const ARR = [-123,4,314,-42,44,1,-4,2,4,'5',66]
-      for (elem of ARR){
-        if (elem === 5){
-          console.log('Есть!')
-          break;
-        }
-      } */
-
-      // task 8
-      /* let sum = 0
-      const ARR = [1,2,3,4,5]
-      for (elem of ARR){
-        sum += elem*elem
-      }
-      console.log(sum) */
-
-      // task 9
-      /* let sum = 0
-      const ARR = [1,2,3,4,5]
-
-      for (elem of ARR ){
-        sum += elem
-      }
-      console.log(sum/ARR.length) */
-
-      // task 10
-      /* const k = 5
-      let fact = 1
-      for (i = 1; i <= k; i++){
-        fact *=i
-      }
-
-      console.log(fact) */
+      //  Найти сумму элементов вручную, без цикла
+      // let arr = [[1, 2, 3, [4, 5, [6, 7]]], [8, [9, 10]]]
+      // Перепишем в более понятном виде:
+      const ARR = [
+        [
+          1, 2, 3, [4, 5, [6, 7]]
+        ],
+        [
+          8, [9, 10]
+        ]
+      ]
+      // Обратимся к каждому элементу:
+      console.log(ARR[0])
+      console.log(ARR[1])
+      console.log(ARR[2]) //Должен быть Undef
+      // А теперь ко всем внутренним значениям:
+      console.log(ARR[0][0])
+      console.log(ARR[0][1])
+      console.log(ARR[0][2])
+      console.log(ARR[0][3][0])
+      console.log(ARR[0][3][1])
+      console.log(ARR[0][3][2][0])
+      console.log(ARR[0][3][2][1])
+      console.log(ARR[1][0])
+      console.log(ARR[1][1][0])
+      console.log(ARR[1][1][1])
     </script>
 
 </body>

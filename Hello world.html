@@ -4,36 +4,32 @@
   <title>My JS App</title>
 <body>
      <script>
-       /* let obj = {
-	1: {
-		1: 11,
-		2: 12,
-		3: 13,
-	},
-	2: {
-		1: 21,
-		2: 22,
-		3: 23,
-	},
-	3: {
-		1: 24,
-		2: 25,
-		3: 26,
-	},
-}
+      const VOCAB_STRING_LOW = 'abcdefghijklmnopqrstuvwxyz'
+      const VOCAB_STRING_UP = VOCAB_STRING_LOW.toUpperCase()
+      let NEW_VOCAB = ''
 
-// task 1
+      for (let j = 0; j < VOCAB_STRING_UP.length; j++){
+        NEW_VOCAB += VOCAB_STRING_UP[j]+VOCAB_STRING_LOW[j]
+      }
+      console.log(NEW_VOCAB) //Наш словарь, с которым будем работать
 
-sum = 0
-for (key in obj){
-  let subObj = obj[key]
-  for (subkey in subObj){
-    sum += subObj[subkey]
-  }
-}
-console.log(sum) */
-  
-    
+
+      let TEMPLATE = ['All', 'I', 'want', 'for', 'christmas', 'is', 'You']
+      let flag = 0
+      let _tempString = ''
+
+      while (!flag){
+        flag = 1
+        for (let k = 0; k < TEMPLATE.length - 1; k++){
+          if (NEW_VOCAB.indexOf(TEMPLATE[k][0]) > NEW_VOCAB.indexOf(TEMPLATE[k+1][0])){
+            flag = 0
+            _tempString = TEMPLATE[k]
+            TEMPLATE[k] = TEMPLATE[k+1] 
+            TEMPLATE[k+1] = _tempString
+          }
+        }
+      }
+      console.log(TEMPLATE) //Выводим отсортированный массив
     </script>
 
 

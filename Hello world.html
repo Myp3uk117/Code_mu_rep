@@ -4,36 +4,27 @@
   <title>My JS App</title>
 <body>
      <script>
-       /* let obj = {
-	1: {
-		1: 11,
-		2: 12,
-		3: 13,
-	},
-	2: {
-		1: 21,
-		2: 22,
-		3: 23,
-	},
-	3: {
-		1: 24,
-		2: 25,
-		3: 26,
-	},
-}
+       const GROUPS = {
+         'A': [
+           'Manchester City' = {'played': 6, 'wins': 4},
+           'Paris Saint-Germain',
+           'RB Leipzig',
+           'Club Brugge'],
+          'B': [
+            'Liverpool FC',
+            'Club Atlético de Madrid',
+            'FC Porto',
+            'AC Milan'
+          ]
+       }
 
-// task 1
+       what_group_is = prompt('В какой группе играет команда?', 'B')
+       what_place_is = prompt('Какое место заняла?', '3')
 
-sum = 0
-for (key in obj){
-  let subObj = obj[key]
-  for (subkey in subObj){
-    sum += subObj[subkey]
-  }
-}
-console.log(sum) */
-  
-    
+       alert('Команда ' + GROUPS[what_group_is][what_place_is-1] + ' заняла ' + what_place_is +' место в группе ' + what_group_is + '.') 
+
+       
+       
     </script>
 
 

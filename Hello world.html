@@ -4,32 +4,36 @@
   <title>My JS App</title>
 <body>
      <script>
-      const VOCAB_STRING_LOW = 'abcdefghijklmnopqrstuvwxyz'
-      const VOCAB_STRING_UP = VOCAB_STRING_LOW.toUpperCase()
-      let NEW_VOCAB = ''
+    // task 1
+    let employees = [
+	{
+		name: 'name1',
+		salary: 300,
+	},
+	{
+		name: 'name2',
+		salary: 400,
+	},
+	{
+		name: 'name3',
+		salary: 500,
+	},
+];  
 
-      for (let j = 0; j < VOCAB_STRING_UP.length; j++){
-        NEW_VOCAB += VOCAB_STRING_UP[j]+VOCAB_STRING_LOW[j]
-      }
-      console.log(NEW_VOCAB) //Наш словарь, с которым будем работать
+  // Выведите на экран сумму зарплат первого и второго работников.
 
 
-      let TEMPLATE = ['All', 'I', 'want', 'for', 'christmas', 'is', 'You']
-      let flag = 0
-      let _tempString = ''
+  console.log(employees[0].salary+employees[1].salary) 
 
-      while (!flag){
-        flag = 1
-        for (let k = 0; k < TEMPLATE.length - 1; k++){
-          if (NEW_VOCAB.indexOf(TEMPLATE[k][0]) > NEW_VOCAB.indexOf(TEMPLATE[k+1][0])){
-            flag = 0
-            _tempString = TEMPLATE[k]
-            TEMPLATE[k] = TEMPLATE[k+1] 
-            TEMPLATE[k+1] = _tempString
-          }
-        }
-      }
-      console.log(TEMPLATE) //Выводим отсортированный массив
+  //task 2 
+  let students = {
+	'boys':  ['Коля', 'Вася', 'Петя'],
+	'girls': ['Даша', 'Маша', 'Лена'],
+};
+
+// Выведите на экран элемент 'Вася' и элемент 'Лена'.
+
+console.log (students.boys[1] + ' ' + students.girls[2])
     </script>
 
 

@@ -4,231 +4,41 @@
   <title>My JS App</title>
 <body>
      <script>
-      //  task 1 
-        let employees = [
-        {
-          name: 'Лёша',
-          salary: 300,
-        },
-        {
-          name: 'Петя',
-          salary: 400,
-        },
-        {
-          name: 'Дима',
-          salary: 500,
-        },
-      ];
+      //  Math.pow
+      // Math.sqrt
 
-      for (let every_emp of employees){ //ВАЖНО: массивы через of, объекты через in
-        console.log(every_emp.name + ' зарабатывает ' + every_emp.salary + ' рублей в месяц.')
+      console.log(Math.pow(2,10))
+      console.log(Math.sqrt(9))
+
+      sum_sqrt = 0
+      let sqrt_array = [4, 2, 5, 19, 13, 0, 10]
+      for (let elem of sqrt_array){
+        sum_sqrt += Math.pow(elem,3)
       }
-      console.log('Вот это они нищеброды :3')
+      
+      console.log(Math.sqrt(sum_sqrt))
 
-      // task 2
-      let employees_2 = [
-      {
-        name: 'name1',
-        salary: 300,
-      },
-      {
-        name: 'name2',
-        salary: 400,
-      },
-      {
-        name: 'name3',
-        salary: 500,
-      },
-    ];
+      // Math.round Math.ceil Math.floor toFixed toPrecision
 
-    let sum_2 = 0
-    for (let every_emp of employees_2){
-      sum_2 += every_emp.salary
-    }
-    console.log(sum_2)
+      console.log (Math.round(Math.sqrt(379)))
+      console.log (Math.sqrt(379).toFixed(1))
+      console.log (Math.sqrt(379).toFixed(2))
 
-    // task 3
+      console.log(Math.floor(Math.sqrt(587)))
+      console.log(Math.ceil(Math.sqrt(587)))
 
-    let employees_3 = [
-    {
-      name: 'name1',
-      salary: 300,
-      age: 28,
-    },
-    {
-      name: 'name2',
-      salary: 400,
-      age: 29,
-    },
-    {
-      name: 'name3',
-      salary: 500,
-      age: 30,
-    },
-    {
-      name: 'name4',
-      salary: 600,
-      age: 31,
-    },
-    {
-      name: 'name5',
-      salary: 700,
-      age: 32,
-    },
-  ];
+      // Math.random
 
-  for (let each_emp of employees_3){
-    if (each_emp.age >= 30){
-      console.log(each_emp.name)
-    }
-  }
-
-  // task 4
-
-    let employees_4 = [
-    {
-      name: 'name1',
-      salary: 300,
-      dismissed: false,
-    },
-    {
-      name: 'name2',
-      salary: 400,
-      dismissed: true,
-    },
-    {
-      name: 'name3',
-      salary: 500,
-      dismissed: false,
-    },
-    {
-      name: 'name4',
-      salary: 600,
-      dismissed: true,
-    },
-    {
-      name: 'name5',
-      salary: 700,
-      dismissed: false,
-    },
-  ];
-
-  for (let each_emp of employees_4){
-    if (!(each_emp.dismissed)){
-      console.log (each_emp.name + ' ' + each_emp.salary)
-    }
-  }
-
-  // task 5
-
-  let data = {
-	1: [
-		'data11',
-		'data12',
-		'data13',
-	],
-	2: [
-		'data21',
-		'data22',
-		'data23',
-	],
-	3: [
-		'data31',
-		'data32',
-		'data33',
-		'data34',
-		'data35',
-	],
-	4: [
-		'data41',
-		'data42',
-	],
-};
-    for (each_arr in data){
-      for (each_data of data[each_arr]){
-        console.log(each_data)
+      console.log(Math.floor(Math.random()*100))+1
+      let array_random = []
+      for (let i = 0; i<10; i++){
+        array_random.push(Math.floor(Math.random()*10)+1)
       }
-    } 
+      console.log(array_random)
 
-    // task 6
-
-    let data_2 = [
-      {
-        1: 'data11',
-        2: 'data12',
-        3: 'data13',
-        4: 'data14',
-      },
-      {
-        1: 'data21',
-        2: 'data22',
-        3: 'data33',
-      },
-      {
-        1: 'data31',
-        2: 'data32',
-      },
-    ];
-    for (let each_obj of data_2){
-      for (let each_data_2 in each_obj){
-        console.log(each_obj[each_data_2])
-      }
-    }
-
-    // task 7
-
-    let data_X = [
-	{
-		1: [
-			'data111',
-			'data112',
-			'data113',
-		],
-		2: [
-			'data121',
-			'data122',
-			'data123',
-		],
-	},
-	{
-		1: [
-			'data211',
-			'data212',
-			'data213',
-		],
-		2: [
-			'data221',
-			'data222',
-			'data223',
-			'data224',
-		],
-		3: [
-			'data231',
-			'data232',
-			'data233',
-			'data234',
-			'data235',
-		],
-	},
-	{
-		1: [
-			'data411',
-			'data412',
-			'data413',
-		],
-		2: [
-			'data421',
-		],
-	},
-];
-
-  for (let i of data_X){
-    for (let k in i){
-      for (let j of i[k]){
-        console.log(j)
-      }
-    }
-  }
+      // Math.abs
+      let a = 17, b = 42
+      console.log(Math.abs(a-b))
     </script>
 
 

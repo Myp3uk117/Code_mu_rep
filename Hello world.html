@@ -4,95 +4,74 @@
   <title>My JS App</title>
 <body>
      <script>
-      
       // task 1
-      let string_1 = 'js'
-      console.log(string_1.toUpperCase())
-      
+      let arr_1 = [1,2,3]
+      arr_1.push(4,5,6)
+      console.log(arr_1)
+
       // task 2
-      let string_2 = 'JS'
-      console.log(string_2.toLowerCase())
+      let arr_2 = [4,5,6]
+      arr_2.unshift(1,2,3)
+      console.log(arr_2)
+
+      // side_task
+      // Пусть дан массив ['1', '2', '3', '4', '5', '6']. Давайте сделаем из него строку '16-25-34'. 
+      let arr_side = ['1','2','3','4','5','6']
+      let arr_help = []
+
+      while (arr_side.length){
+        arr_help.push(arr_side.shift()+arr_side.pop())
+      }
+      console.log(arr_help.join('-'))
 
       // task 3
-      let string_3 = 'Я учу Javascript!'
-      //чуть изменим задание. Не будем считать индексы ручками.
-      console.log(string_3.slice(string_3.indexOf('у'), string_3.lastIndexOf('у')+1) + '? ' + string_3.slice(string_3.indexOf('J'), string_3.indexOf('t')+1) + '!')
-      
-      //task 4
-      let string_4 = 'abcde'
-      console.log(string_4.indexOf('c')+1)
+      let arr_3 = [1,2,3]
+      console.log(arr_3[0]) //Вообще говоря, можно и так.
+      console.log(arr_3.shift()) // Но от нас наверняка хотят этого.
+
+      // task 4
+      let arr_4 = [1,2,3]
+      console.log(arr_4[arr_4.length-1]) //Всё ещё можно так.
+      console.log(arr_4.pop()) // Но пишем так.
 
       // task 5
-      let string_5 = 'abcde'
-      if (string_5.indexOf('a')+1){
-        console.log('Да, встречается!')
-      } else {
-        console.log('Нет, не встречается! :(')
-      }
+      let arr_5 = ['a', 'b', 'c', 'd', 'e']
+      console.log(arr_5.slice(0,3))
 
       // task 6
-      let string_6 = 'ajsdinijnaijfd'
-      if (string_6.indexOf('a')){
-        console.log('Нет, не начинается! :(')
-      } else {
-        console.log('Да, начинается!')
-      }
+      let arr_6 = [1,2,3,4,5]
+      let arr_temp_6 = []
+      arr_temp_6 = arr_6.slice(3)
+      console.log(arr_temp_6)
 
       // task 7
-      let string_7 = 'dadsaadsaasddasdfdfgdfa'
-      if (string_7.lastIndexOf('a')+1 == string_7.length){
-        console.log('Да, заканчивается!')
-      } else {
-        console.log('Нет, не заканчивается! :(')
-      }
+      let arr_7 = [1,2,3,4,5]
+      arr_7.splice(1,2)
+      console.log(arr_7)
 
       // task 8
-      let string_8 = 'https://vk.com/im'
-      if (!(string_8.indexOf('http://'))){
-        console.log('Да, начинается')
-      } else {
-        console.log('Нет, не начинается :(')
-      }
+      let arr_8 = [1,2,3,4,5]
+      arr_8.splice(3,0,'a','b','c')
+      console.log(arr_8)
 
       // task 9
-      let string_9 = 'index.html'
-      const SEEK_STRING = '.html'
-      if (!((string_9.slice(-SEEK_STRING.length)).indexOf(SEEK_STRING))){
-        console.log ('Да, заканчивается!')
-      } else {
-        console.log ('Нет, не заканчивается!')
-      }
+      let arr_9 = [1,2,3,4,5]
+      arr_9.splice(5,0,'e')
+      arr_9.splice(4,0,'c')
+      arr_9.splice(1,0,'a','b')
+      console.log(arr_9)
 
       // task 10
-      let string_10 = 'https://vk.com/im'
-      if (string_10.startsWith('https://')){
-        console.log('Да, начинается!')
-      } else {
-        console.log('Нет, не начинается -__-')
-      }
+      let arr_10 = [1,2,3,4,5]
+      console.log(arr_10.indexOf(3)+1)
 
       // task 11
-      let string_11 = 'index.html'
-      if (string_11.endsWith('.html')){
-        console.log('Да, заканчивается!')
+      let arr_11 = [1,2,3,4,5]
+      if (arr_11.includes(3)){
+        console.log('Включает!')
       } else {
-        console.log('Нет, не заканчивается :(')
+        console.log('Не включает :(')
       }
-
-      // task 12  
-      const string_12 = '1-2-3-4-5'
-      const arr_12 = string_12.split('-')
-      console.log(arr_12)
-
-      // task 13
-      const string_13 = '12345'
-      const arr_13 = string_13.split('')
-      console.log(arr_13)
-
-      // task 14
-      const arr_14 = [1, 2, 3, 4, 5]
-      const STRING_14 = arr_14.join('-')
-      console.log(STRING_14)
     </script>
 
 

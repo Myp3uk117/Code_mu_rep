@@ -4,41 +4,95 @@
   <title>My JS App</title>
 <body>
      <script>
-      //  Math.pow
-      // Math.sqrt
-
-      console.log(Math.pow(2,10))
-      console.log(Math.sqrt(9))
-
-      sum_sqrt = 0
-      let sqrt_array = [4, 2, 5, 19, 13, 0, 10]
-      for (let elem of sqrt_array){
-        sum_sqrt += Math.pow(elem,3)
-      }
       
-      console.log(Math.sqrt(sum_sqrt))
+      // task 1
+      let string_1 = 'js'
+      console.log(string_1.toUpperCase())
+      
+      // task 2
+      let string_2 = 'JS'
+      console.log(string_2.toLowerCase())
 
-      // Math.round Math.ceil Math.floor toFixed toPrecision
+      // task 3
+      let string_3 = 'Я учу Javascript!'
+      //чуть изменим задание. Не будем считать индексы ручками.
+      console.log(string_3.slice(string_3.indexOf('у'), string_3.lastIndexOf('у')+1) + '? ' + string_3.slice(string_3.indexOf('J'), string_3.indexOf('t')+1) + '!')
+      
+      //task 4
+      let string_4 = 'abcde'
+      console.log(string_4.indexOf('c')+1)
 
-      console.log (Math.round(Math.sqrt(379)))
-      console.log (Math.sqrt(379).toFixed(1))
-      console.log (Math.sqrt(379).toFixed(2))
-
-      console.log(Math.floor(Math.sqrt(587)))
-      console.log(Math.ceil(Math.sqrt(587)))
-
-      // Math.random
-
-      console.log(Math.floor(Math.random()*100))+1
-      let array_random = []
-      for (let i = 0; i<10; i++){
-        array_random.push(Math.floor(Math.random()*10)+1)
+      // task 5
+      let string_5 = 'abcde'
+      if (string_5.indexOf('a')+1){
+        console.log('Да, встречается!')
+      } else {
+        console.log('Нет, не встречается! :(')
       }
-      console.log(array_random)
 
-      // Math.abs
-      let a = 17, b = 42
-      console.log(Math.abs(a-b))
+      // task 6
+      let string_6 = 'ajsdinijnaijfd'
+      if (string_6.indexOf('a')){
+        console.log('Нет, не начинается! :(')
+      } else {
+        console.log('Да, начинается!')
+      }
+
+      // task 7
+      let string_7 = 'dadsaadsaasddasdfdfgdfa'
+      if (string_7.lastIndexOf('a')+1 == string_7.length){
+        console.log('Да, заканчивается!')
+      } else {
+        console.log('Нет, не заканчивается! :(')
+      }
+
+      // task 8
+      let string_8 = 'https://vk.com/im'
+      if (!(string_8.indexOf('http://'))){
+        console.log('Да, начинается')
+      } else {
+        console.log('Нет, не начинается :(')
+      }
+
+      // task 9
+      let string_9 = 'index.html'
+      const SEEK_STRING = '.html'
+      if (!((string_9.slice(-SEEK_STRING.length)).indexOf(SEEK_STRING))){
+        console.log ('Да, заканчивается!')
+      } else {
+        console.log ('Нет, не заканчивается!')
+      }
+
+      // task 10
+      let string_10 = 'https://vk.com/im'
+      if (string_10.startsWith('https://')){
+        console.log('Да, начинается!')
+      } else {
+        console.log('Нет, не начинается -__-')
+      }
+
+      // task 11
+      let string_11 = 'index.html'
+      if (string_11.endsWith('.html')){
+        console.log('Да, заканчивается!')
+      } else {
+        console.log('Нет, не заканчивается :(')
+      }
+
+      // task 12  
+      const string_12 = '1-2-3-4-5'
+      const arr_12 = string_12.split('-')
+      console.log(arr_12)
+
+      // task 13
+      const string_13 = '12345'
+      const arr_13 = string_13.split('')
+      console.log(arr_13)
+
+      // task 14
+      const arr_14 = [1, 2, 3, 4, 5]
+      const STRING_14 = arr_14.join('-')
+      console.log(STRING_14)
     </script>
 
 

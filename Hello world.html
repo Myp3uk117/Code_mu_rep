@@ -5,25 +5,59 @@
 <body>
      <script>
       
-      //  task 1
-      function call_name(){
-        console.log('Сергей')
+      // task 1
+
+      function triple(num){
+        console.log('Math.pow(num,3):', Math.pow(num,3))
       }
 
-      call_name()
+      let NUM = 10
+      triple(NUM)
 
       // task 2
 
-      function sum_nums(a,b){
-        let sum = 0
-        for (i = a; i <= b; i++){
-          sum += i
+      function isPositive(num){
+        if (num >= 0){
+          console.log('+++')
+        } else {
+          console.log('---')
         }
-        console.log('sum:', sum)
       }
-      const FIRST = 1, SECOND = 100
-      sum_nums(FIRST,SECOND)
 
+      let NUM_2 = -13 
+      isPositive(NUM_2)
+
+      // task 3
+      function sum_3_nums(a,b,c){
+        console.log(+a+b+c)
+      }
+
+      const A = 12, B = -23, C = -3
+      sum_3_nums(A,B,C)
+
+      // task 4
+      // Вообще говоря, в задаче 3 уже было всё это сделано :3
+
+      // task 5
+      function func(num = 5) {
+        alert(num * num);
+      }
+      // Делаем предположения:
+      func(2); // 4
+      func(3); // 9
+      func(); //25
+      // Correct.
+
+      // task 6
+      function func_2(num1 = 0, num2 = 0) {
+        alert(num1 + num2);
+      }
+      // Делаем предположения:
+      func_2(2, 3);// 5
+      func_2(3);// 3
+      func_2();// 0
+      // Correct.
+      
     </script>
 
 

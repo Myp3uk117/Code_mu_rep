@@ -4,74 +4,61 @@
   <title>My JS App</title>
 <body>
      <script>
+
       // task 1
-      let arr_1 = [1,2,3]
-      arr_1.push(4,5,6)
-      console.log(arr_1)
+      let str_1 = 'London'
+      const upper_str_1 = str_1.slice(0,-1) + str_1.slice(-1).toUpperCase()
+      console.log('upper_str_1:', upper_str_1)
 
       // task 2
-      let arr_2 = [4,5,6]
-      arr_2.unshift(1,2,3)
-      console.log(arr_2)
-
-      // side_task
-      // Пусть дан массив ['1', '2', '3', '4', '5', '6']. Давайте сделаем из него строку '16-25-34'. 
-      let arr_side = ['1','2','3','4','5','6']
-      let arr_help = []
-
-      while (arr_side.length){
-        arr_help.push(arr_side.shift()+arr_side.pop())
-      }
-      console.log(arr_help.join('-'))
+      let str_2 = 'dosomeThing'
+      const upper_str_2 = str_2.slice(0,2).toUpperCase() + str_2.slice(2)
+      console.log('upper_str_2:', upper_str_2)
 
       // task 3
-      let arr_3 = [1,2,3]
-      console.log(arr_3[0]) //Вообще говоря, можно и так.
-      console.log(arr_3.shift()) // Но от нас наверняка хотят этого.
+      let str_3 = 'Moscow'
+      // Вообще говоря, если только одна буква у нас заглавная, то можно сделать так:
+      console.log('str_3.toLowerCase():', str_3.toLowerCase())
+      // Но от нас наверняка хотят вот этого:
+      const lower_str_3 = str_3.slice(0,1).toLowerCase() + str_3.slice(1)
+      console.log('lower_str_3:', lower_str_3)
 
       // task 4
-      let arr_4 = [1,2,3]
-      console.log(arr_4[arr_4.length-1]) //Всё ещё можно так.
-      console.log(arr_4.pop()) // Но пишем так.
+      let str_4 = 'wild wild web'
+      let arr_4 = str_4.split(' ')
+      let new_arr_4 = []
+      for (i of arr_4){
+        new_arr_4.push(i[0].toUpperCase() + i.slice(1))
+      }
+      console.log('new_arr_4.join():', new_arr_4.join('-'))
 
       // task 5
-      let arr_5 = ['a', 'b', 'c', 'd', 'e']
-      console.log(arr_5.slice(0,3))
+      // Преобразуйте строку 'var_test_text' в 'VarTestText'.
+
+      let str_5 = 'var_test_text'
+      let arr_5 = str_5.split('_')
+      let temp_arr_5 = []
+      for (i of arr_5){
+        temp_arr_5.push(i[0].toUpperCase() + i.slice(1))
+      }
+      console.log('temp_arr_5.join():', temp_arr_5.join(''))
 
       // task 6
-      let arr_6 = [1,2,3,4,5]
-      let arr_temp_6 = []
-      arr_temp_6 = arr_6.slice(3)
-      console.log(arr_temp_6)
+      let str_6 = 'New_Janson_Creeper_world'
+      let arr_6 = str_6.split('_')
+      let temp_arr_6 = []
+      temp_arr_6.push(arr_6[0][0].toLowerCase() + arr_6[0].slice(1))
+      for (i = 1; i < arr_6.length; i++){
+        temp_arr_6.push(arr_6[i][0].toUpperCase() + arr_6[i].slice(1))
+      }
+
+      console.log('temp_arr_6.join():', temp_arr_6.join(''))
 
       // task 7
-      let arr_7 = [1,2,3,4,5]
-      arr_7.splice(1,2)
-      console.log(arr_7)
+      let str_7 = 'lorem ipsum dolor sit amet'
+      console.log('str_7.split().reverse().join():', str_7.split(' ').reverse().join(' '))
+      
 
-      // task 8
-      let arr_8 = [1,2,3,4,5]
-      arr_8.splice(3,0,'a','b','c')
-      console.log(arr_8)
-
-      // task 9
-      let arr_9 = [1,2,3,4,5]
-      arr_9.splice(5,0,'e')
-      arr_9.splice(4,0,'c')
-      arr_9.splice(1,0,'a','b')
-      console.log(arr_9)
-
-      // task 10
-      let arr_10 = [1,2,3,4,5]
-      console.log(arr_10.indexOf(3)+1)
-
-      // task 11
-      let arr_11 = [1,2,3,4,5]
-      if (arr_11.includes(3)){
-        console.log('Включает!')
-      } else {
-        console.log('Не включает :(')
-      }
     </script>
 
 

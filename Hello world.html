@@ -4,60 +4,25 @@
   <title>My JS App</title>
 <body>
      <script>
+      
+      //  task 1
+      function call_name(){
+        console.log('Сергей')
+      }
 
-      // task 1
-      let str_1 = 'London'
-      const upper_str_1 = str_1.slice(0,-1) + str_1.slice(-1).toUpperCase()
-      console.log('upper_str_1:', upper_str_1)
+      call_name()
 
       // task 2
-      let str_2 = 'dosomeThing'
-      const upper_str_2 = str_2.slice(0,2).toUpperCase() + str_2.slice(2)
-      console.log('upper_str_2:', upper_str_2)
 
-      // task 3
-      let str_3 = 'Moscow'
-      // Вообще говоря, если только одна буква у нас заглавная, то можно сделать так:
-      console.log('str_3.toLowerCase():', str_3.toLowerCase())
-      // Но от нас наверняка хотят вот этого:
-      const lower_str_3 = str_3.slice(0,1).toLowerCase() + str_3.slice(1)
-      console.log('lower_str_3:', lower_str_3)
-
-      // task 4
-      let str_4 = 'wild wild web'
-      let arr_4 = str_4.split(' ')
-      let new_arr_4 = []
-      for (i of arr_4){
-        new_arr_4.push(i[0].toUpperCase() + i.slice(1))
+      function sum_nums(a,b){
+        let sum = 0
+        for (i = a; i <= b; i++){
+          sum += i
+        }
+        console.log('sum:', sum)
       }
-      console.log('new_arr_4.join():', new_arr_4.join('-'))
-
-      // task 5
-      // Преобразуйте строку 'var_test_text' в 'VarTestText'.
-
-      let str_5 = 'var_test_text'
-      let arr_5 = str_5.split('_')
-      let temp_arr_5 = []
-      for (i of arr_5){
-        temp_arr_5.push(i[0].toUpperCase() + i.slice(1))
-      }
-      console.log('temp_arr_5.join():', temp_arr_5.join(''))
-
-      // task 6
-      let str_6 = 'New_Janson_Creeper_world'
-      let arr_6 = str_6.split('_')
-      let temp_arr_6 = []
-      temp_arr_6.push(arr_6[0][0].toLowerCase() + arr_6[0].slice(1))
-      for (i = 1; i < arr_6.length; i++){
-        temp_arr_6.push(arr_6[i][0].toUpperCase() + arr_6[i].slice(1))
-      }
-
-      console.log('temp_arr_6.join():', temp_arr_6.join(''))
-
-      // task 7
-      let str_7 = 'lorem ipsum dolor sit amet'
-      console.log('str_7.split().reverse().join():', str_7.split(' ').reverse().join(' '))
-      
+      const FIRST = 1, SECOND = 100
+      sum_nums(FIRST,SECOND)
 
     </script>
 

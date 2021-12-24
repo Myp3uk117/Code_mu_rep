@@ -4,133 +4,106 @@
   <title>My JS App</title>
 <body>
      <script>
-      // task 1 
-      function cube(num){
-        return Math.pow(num,3)
+      //  task 1
+      function sum_squares(arr){
+        let sum = 0
+        for (elem of arr){
+          sum += elem*elem
+        }
+        return sum;
       }
-      let result_1 = cube(3)
-      console.log('result_1:', result_1)
+
+      console.log('sum_squares([1,2,3,4,5,4]):', sum_squares([1,2,3,4,5,4]))
 
       // task 2
-      function sqrt(num){
-        return Math.sqrt(num)
+
+      function getDigitsSum(num = 78178){
+        let sum = 0
+        let temp_arr = String(num).split('')
+        for (elem of temp_arr){
+          sum += Number(elem)
+        }
+        return sum
       }
 
-      let result_2 = sqrt(3) + sqrt(4)
-      console.log('result_2:', result_2)
+      console.log('getDigitsSum:', getDigitsSum())
 
       // task 3
 
-      function round(num) {
-        return num.toFixed(3);
+      function getDivisors(num){
+        let temp_arr = []
+        if (num <= 0){
+          console.log('Введено некорректное число')
+          return;
+        }
+        for (i = 1; i <= num; i++){
+          if (num % i == 0){
+            temp_arr.push(i)
+          }
+        }
+        return temp_arr
       }
-      let result_3 = round(sqrt(2))
-      console.log('result_3:', result_3)
+
+      console.log('getDivisors(12):', getDivisors(1253))
 
       // task 4
-      function sum_3(num1, num2, num3) {
-        return num1 + num2 + num3;
+
+      function reverseStr(string){
+        return string.split('').reverse().join('')
       }
 
-      let result_4 = sum_3(sqrt(2),sqrt(3),sqrt(4))
-      console.log('result_4:', result_4)
+      console.log(reverseStr('Lorem ipsum и т.д.'))
 
       // task 5
-      console.log('round(result_4):', round(result_4))
+
+      function delElem(elem,arr){
+        /* for (i of arr){
+          if (i === elem){
+            arr.splice(arr.indexOf(elem) , 1)
+            
+          }
+        } */ // Неплохо, но пробегает как-то неправильно. Скорее всего, из-за скукоживания массива.
+
+        for (i = 0; i < arr.length; i++){
+          if (arr[i] === elem){
+            arr.splice(arr.indexOf(elem) , 1)
+            i -= 1
+          }
+        } // Можно решить варварским методом, тупо убавлять единицу, чтобы цикл учитывал скукоживания массива.
+        return arr
+      }
+
+      console.log('delElem(1,[1,2,3,4,5,1,1,2,3,1,1]):', delElem(1,[1,2,3,4,5,1,1,2,3,1,1]))
+      console.log('delElem(1,[1,11,1,11,1,1,1,1,1,1,1,1,11]):', delElem(1,[1,11,1,11,1,1,1,1,1,1,1,1,11]))
 
       // task 6
-      function func(num) {
-        return num;
-        
-        let result = num * num;
-        return result;
+
+      function integers(num){
+        let new_arr = []
+        for (let i = 1; i<= num; i++){
+          new_arr.push(i)
+        }
+        return new_arr
       }
 
-      console.log('func(3):', func(3))
-      //Выведет 3, потому что второй return не будет учитываться.
+      console.log('integers(25):', integers(25))
 
       // task 7
-      function func_abs(num) {
-        if (num <= 0) {
-          return Math.abs(num);
-        } else {
-          return num * num;
+      function integer_divs(a,b){
+        let new_arr = []
+        let switch_case = 0
+        if (a > b){
+          switch_case = a
+          a = b
+          b = switch_case
         }
+        for (let i = a; i<= b; i++){
+          new_arr.push(i)
+        }
+        return new_arr
       }
 
-      console.log('func_abs(10):', func_abs(10))
-      console.log('func_abs(-5):', func_abs(-5))
-      // Потому что return-ы не пересекаются — обязательно выполнится хотя бы один, в зависимости от условия.
-
-      // task 8
-      function func_abs_2(num) {
-        if (num <= 0) {
-          return Math.abs(num);
-        }
-        
-        return num * num;
-      }
-
-      console.log('func_abs_2(10) :', func_abs_2(10) )
-      console.log('func_abs_2(-5):', func_abs_2(-5))
-      
-      // Похожая история, что и в предыдущем таске. 
-
-      // task 9
-      function func_9(num) {
-        let sum = 0;
-        
-        for (let i = 1; i <= num; i++) {
-          sum += i;
-          // return sum; — вот эта строчка — дичь. Первым же return цикл закончится. 
-        }
-        return sum; //Вот сюда нужно вписать return.
-      }
-
-      console.log('func_9(5):', func_9(5))
-
-      // task 10
-      
-      function divide(num){
-        let count_divide = 0
-        while(1){
-          if (num <= 10){
-            return count_divide
-          }
-          num /= 2
-          count_divide += 1
-        }
-      }
-      console.log('divide(2355):', divide(2355))
-
-      // task 11
-      function func_11(num1, num2) {
-        let result;
-        
-        if (num1 > 0 && num2 > 0) {
-          result = num1 * num2;
-        } else {
-          result = num1 - num2;
-        }
-        
-        return result;
-      }
-
-      console.log(func_11(3, 4));
-
-      // Перепишем:
-      function func_11_test(num1, num2) {
-        
-        if (num1 > 0 && num2 > 0) {
-          return num1 * num2;
-        } else {
-          return num1 - num2;
-        }
-        
-      }
-
-      console.log(func_11_test(3, 4));
-
+      console.log('integer_divs(16,-3):', integer_divs(16,-3))
     </script>
 
 
